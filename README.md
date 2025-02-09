@@ -25,7 +25,9 @@ This is a Spring Boot application for handling user registration, including vali
 - **Phone Number**: The phone number must be exactly 10 digits. This is validated using a custom regex pattern:  
   ```regex
   ^\d{10}$
-- **Password**: The password must be between 8 and 10 characters long and contain at least one alphanumeric character and one special character. This is validated using the regex: ^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$
+- **Password**: The password must be between 8 and 10 characters long and contain at least one alphanumeric character and one special character. This is validated using the regex:
+  ```regex
+  ^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$
 
 ## API Endpoints
 
