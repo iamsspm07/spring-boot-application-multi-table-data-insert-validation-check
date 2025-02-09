@@ -18,6 +18,15 @@ This is a Spring Boot application for handling user registration, including vali
 - **Security**: Spring Security for password encoding
 - **Dependencies**: Spring Web, Spring Data JPA, Spring Boot Starter Validation
 
+## Key Validations
+
+- **Email**: The email must follow the standard email format (e.g., `example@domain.com`). This is validated using the `@Email` annotation.
+
+- **Phone Number**: The phone number must be exactly 10 digits. This is validated using a custom regex pattern:  
+  ```regex
+  ^\d{10}$
+- **Password**: The password must be between 8 and 10 characters long and contain at least one alphanumeric character and one special character. This is validated using the regex: ^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$
+
 ## API Endpoints
 
 ### 1. **User Registration**
@@ -30,12 +39,12 @@ This is a Spring Boot application for handling user registration, including vali
 
 ```json
 {
-    "userName": "John Doe",
-    "userMail": "john.doe@example.com",
+    "userName": "Sujit Shibaprasad Maity",
+    "userMail": "sujitmaity@yahoo.com",
     "userPassword": "P@ssw0rd123",
-    "userNumber": "9876543210",
+    "userNumber": "7770053550",
     "userRole": "Customer",
     "userProfession": "Business",
-    "country": "USA",
-    "city": "New York"
+    "country": "India",
+    "city": "Mumbai"
 }
