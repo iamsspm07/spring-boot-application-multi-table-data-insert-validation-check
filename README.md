@@ -18,9 +18,24 @@ This is a Spring Boot application for handling user registration, including vali
 - **Security**: Spring Security for password encoding
 - **Dependencies**: Spring Web, Spring Data JPA, Spring Boot Starter Validation
 
-## Tech Stack
-- **Backend**: Spring Boot
-- **Database**: PostgreSQL
-- **Validation**: Java Bean Validation (JSR-303)
-- **Security**: Spring Security for password encoding
-- **Dependencies**: Spring Web, Spring Data JPA, Spring Boot Starter Validation
+## API Endpoints
+
+### 1. **User Registration**
+
+**URL**: `/api/users/register`
+
+**Method**: `POST`
+
+**Request Body**:
+
+```json
+{
+    "userName": "John Doe",
+    "userMail": "john.doe@example.com",
+    "userPassword": "P@ssw0rd123",
+    "userNumber": "9876543210",
+    "userRole": "Customer",
+    "userProfession": "Business",
+    "country": "USA",
+    "city": "New York"
+}
